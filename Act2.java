@@ -22,44 +22,35 @@ public class Act2 {
         Name = scanner.nextLine();
       }while(Name.isBlank());
       
+      while(Name.length() < 2 || Name.length() > 25) {
+        System.out.println("Name must contain 2-25 characters: ");
+        Name = scanner.nextLine();
+      }
+
       System.out.println("Item Code (15-65):");
       itemCode = scanner.nextInt();
+
+      while(itemCode>65 || itemCode<15) {
+        System.out.println("Please enter a number between 15-65 for your Item Code:");
+        itemCode = scanner.nextInt();
+      }
       
       System.out.println("Qty Purchased (2-50):");
       qtyPurchase = scanner.nextInt();
+
+      while(qtyPurchase>50 || qtyPurchase<2) {
+        System.out.println("Please enter a number between 2-50 for your Qty purchase:");
+        qtyPurchase = scanner.nextInt();
+      }
       
       System.out.println("Payment Code (1/2):");
       paymentCode = scanner.nextInt();
-      
-      while(itemCode<15) {
-        System.out.println("Please enter a number between 15-65 for your Item Code:");
-        itemCode = scanner.nextInt();
-      }
 
-      while(itemCode>65) {
-        System.out.println("Please enter a number between 15-65 for your Item Code:");
-        itemCode = scanner.nextInt();
-      }
-
-      while(qtyPurchase<2) { 
-        System.out.println("Please enter a number between 2-50 for your Qty purchase:");
-        qtyPurchase = scanner.nextInt();
-      }
-
-      while(qtyPurchase>50) {
-        System.out.println("Please enter a number between 2-50 for your Qty purchase:");
-        qtyPurchase = scanner.nextInt();
-      }
-
-      while(paymentCode<1) {
+      while(paymentCode<1 || paymentCode>2) {
         System.out.println("Please enter a number between 1-2 for your Payment Code:");
         paymentCode = scanner.nextInt();
       }
-      
-      while(paymentCode>2) {
-        System.out.println("Please enter a number between 1-2 for your Payment Code");
-        paymentCode = scanner.nextInt();
-      }
+
       scanner.close();
 
       if (itemCode<36) {
