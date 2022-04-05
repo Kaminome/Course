@@ -1,3 +1,3 @@
-# Course
+# ICT Activities
 
-This is just a simple ICT activity
+These are just some of my ICT activities
